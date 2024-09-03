@@ -1,15 +1,18 @@
-#include <stdio.h>
+// src/main.c
+
+#include <ncurses.h>
 #include "game.h"
 
 int main() {
-    init_game();
+    Map map;
+    Player player;
 
-    Player player = {COLS / 2, LINES / 2, '@'};  // Starts player at the center of the screen
-
-    draw_player(&player);  // Draws player for the first time
+    init_game();  // Starts ncurses and configures screen
+    init_map(&map);  // Starts map
+    init_player(&player, MAP_WIDTH / 2, MAP_HEIGHT / 2, '@');  // Starts player at the center of the map
 
     while (1) {
-        game_loop(&player);  // Executes the main game loop
+        game_loop(&player, &map);  // Executes the main game loop
     }
 
     endwin();  // Stops ncurses
