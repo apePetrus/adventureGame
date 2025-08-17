@@ -1,7 +1,7 @@
 # Makefile
 
 CC = gcc
-CFLAGS = -Wall -Wextra -pedantic -std=c99 -Iinclude
+CFLAGS = -Wall -Wextra -pedantic -std=c99
 LDFLAGS = -lncurses
 
 SRC = src/main.c src/game.c src/map.c src/player.c
