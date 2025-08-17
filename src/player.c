@@ -1,7 +1,7 @@
 // src/player.c
 
 #include <ncurses.h>
-#include "player.h"
+#include "../include/player.h"
 
 void init_player(Player *player, int startX, int startY, char symbol){
     player->x = startX;  // Sets player initial X position

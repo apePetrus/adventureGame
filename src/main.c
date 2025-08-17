@@ -1,7 +1,7 @@
 // src/main.c
 
 #include <ncurses.h>
-#include "game.h"
+#include "../include/game.h"
 
 int main() {
     Map map;

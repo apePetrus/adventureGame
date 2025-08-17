@@ -1,7 +1,7 @@
 // src/map.c
 
 #include <ncurses.h>
-#include "map.h"
+#include "../include/map.h"
 
 void init_map(Map *map){
     for (int y = 0; y < MAP_HEIGHT; y++) {

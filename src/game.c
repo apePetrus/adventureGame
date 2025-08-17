@@ -2,7 +2,7 @@
 
 #include <ncurses.h>
 #include <stdlib.h>
-#include "game.h"
+#include "../include/game.h"
 
 void init_game() {
     initscr();  // Start ncurses mode
