@@ -1,18 +1,14 @@
 # adventureGame
 
-a simple ASCII RPG game written in C.
+## A simple ASCII RPG game written in C
 
-Q: why does this exist?
-A: because I'm studying software development and I want to understand more about low-level programming. also, I really like the concept of text-based adventure games, so the game itself is built from love.
+I am making this as a long-term personal project just to keep myself with some different programming skills out of my current job's stack. I don't think that I might end up working with the C language and I am not into game development. Therefore, I bet this is gonna be fun.
 
-what do we have yet:
-- A movable player
-- Just that, lol
-
-future plans:
+## Plans:
+- A movable player, lol
 - A map where the player moves in
 - Inventory
 - Enemies
-- Randomly generated worlds
+- Randomly generated maps
 - Classes and races
 - Weapons, armour and other items
