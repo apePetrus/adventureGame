@@ -1,25 +1,27 @@
 #include <ncurses.h>
 #include "../include/map.h"
 
-void init_map(Map *map){
-    for (int y = 0; y < MAP_HEIGHT; y++) {
-        for (int x = 0; x < MAP_WIDTH; x++) {
-            if (y == 0 || y == MAP_HEIGHT - 1 || x == 0 || x == MAP_WIDTH - 1) {
-                map->tiles[y][x] = '#';
-            }
-            else {
-                map->tiles[y][x] = ' ';
-            }
-        }
-    }
+static WINDOW *mapwin = NULL;
+
+void init_map(void){
+    mapwin = newwin(MAP_HEIGHT, MAP_WIDTH, 0, 0);
+    box(mapwin, 0, 0);
+    wrefresh(mapwin);
 }
 
-void draw_map(const Map *map){
-    clear();
-
-    for (int y = 0; y < MAP_HEIGHT; y++) {
-        for (int x = 0; x < MAP_WIDTH; x++) {
-            mvprintw(y, x, "%c", map->tiles[y][x]);
+void draw_map(void){
+    // For now, fill interior with spaces if needed
+    for (int y = 1; y < MAP_HEIGHT - 1; y++) {
+        for (int x = 1; x < MAP_WIDTH - 1; x++) {
+            mvwaddch(mapwin, y, x, ' ');
         }
     }
+
+    box(mapwin, 0, 0);
+
+    wrefresh(mapwin);
+}
+
+WINDOW* get_mapwin(void) {
+    return mapwin;
 }

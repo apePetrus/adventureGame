@@ -5,6 +5,6 @@
 #include "map.h"
 
 void init_game();
-void game_loop(Player *player, Map *map);
+void game_loop(Player *player);
 
 #endif

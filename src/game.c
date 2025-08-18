@@ -15,7 +15,7 @@ void init_game() {
 }
 
 
-void game_loop(Player *player, Map *map) {
+void game_loop(Player *player) {
     int ch = getch();
 
     if (ch != ERR) {
@@ -46,9 +46,8 @@ void game_loop(Player *player, Map *map) {
                 endwin();
                 exit(0);
         }
-        draw_map(map);
+        draw_map();
         draw_player(player);
-        refresh();
-
+        wrefresh(get_mapwin());
     }
 }

@@ -8,5 +8,5 @@ void init_player(Player *player, int startX, int startY, char symbol){
 }
 
 void draw_player(const Player *player){
-    mvprintw(player->y, player->x, "%c", player->symbol);
+    mvwaddch(get_mapwin(), player->y, player->x, player->symbol);
 }

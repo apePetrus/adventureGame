@@ -1,6 +1,10 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
+#include <ncurses.h>
+
+WINDOW* get_mapwin(void);
+
 typedef struct {
     int x;
     int y;
