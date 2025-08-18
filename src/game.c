@@ -1,14 +1,12 @@
-// src/game.c
-
 #include <ncurses.h>
 #include <stdlib.h>
 #include "../include/game.h"
 
 void init_game() {
-    initscr();  // Start ncurses mode
+    initscr();
     // raw();  // Grabs pressed keys instantly
-    noecho();  // Does not show up typed characters
-    curs_set(FALSE);  // Hide the cursor
+    noecho();
+    curs_set(FALSE);
     keypad(stdscr, TRUE);  // Enables special chars input like arrows
     // timeout(100);  // Define a timeout for getch()
 
@@ -18,39 +16,39 @@ void init_game() {
 
 
 void game_loop(Player *player, Map *map) {
-    int ch = getch();  // Grabs pressed key
+    int ch = getch();
 
-    if (ch != ERR) {  // ERR indicates that no key was pressed
-        switch (ch){  
+    if (ch != ERR) {
+        switch (ch){
             case 'W':
             case 'w':
-                player->y = (player->y > 0) ? player->y - 1 : player->y;  // Moves player up, if possible
+                player->y = (player->y > 0) ? player->y - 1 : player->y;
                 break;
-            
+
             case 'A':
             case 'a':
-                player->x = (player->x > 0) ? player->x - 1 : player->x;  // Moves player left, if possible
+                player->x = (player->x > 0) ? player->x - 1 : player->x;
                 break;
 
             case 'S':
             case 's':
-                player->y = (player->y < MAP_HEIGHT - 1) ? player->y + 1 : player->y;  // Moves player down, if possible
+                player->y = (player->y < MAP_HEIGHT - 1) ? player->y + 1 : player->y;
                 break;
-            
+
             case 'D':
             case 'd':
-                player->x = (player->x < MAP_WIDTH - 1) ? player->x + 1 : player->x;  // Moves player left, if possible
+                player->x = (player->x < MAP_WIDTH - 1) ? player->x + 1 : player->x;
                 break;
             // Using "player->x" is a way to access the 'x' field of the Player struct
 
             case 'Q':
             case 'q':
-                endwin();  // Stops ncurses
-                exit(0);  // Exits program
+                endwin();
+                exit(0);
         }
-        draw_map(map);  // Redraws the map after player's movement
-        draw_player(player);  // Redraws player after movement
-        refresh();  // Refreshes the screen
+        draw_map(map);
+        draw_player(player);
+        refresh();
 
     }
 }
