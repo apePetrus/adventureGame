@@ -1,9 +1,7 @@
-// include/player.h
-
 #ifndef PLAYER_H
 #define PLAYER_H
 
-typedef struct {  // Player structure
+typedef struct {
     int x;
     int y;
     char symbol;
@@ -15,4 +13,4 @@ void draw_player(const Player *player);
 // If you just used the struct directly, the function would make changes locally,
 // not affecting the orignal.
 
-#endif  // PLAYER_H
+#endif
