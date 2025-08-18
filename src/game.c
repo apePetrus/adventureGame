@@ -22,22 +22,22 @@ void game_loop(Player *player) {
         switch (ch){
             case 'W':
             case 'w':
-                player->y = (player->y > 0) ? player->y - 1 : player->y;
+                player->y = (player->y > 1) ? player->y - 1: player->y;
                 break;
 
             case 'A':
             case 'a':
-                player->x = (player->x > 0) ? player->x - 1 : player->x;
+                player->x = (player->x > 1) ? player->x - 1 : player->x;
                 break;
 
             case 'S':
             case 's':
-                player->y = (player->y < MAP_HEIGHT - 1) ? player->y + 1 : player->y;
+                player->y = (player->y < MAP_HEIGHT - 2) ? player->y + 1 : player->y;
                 break;
 
             case 'D':
             case 'd':
-                player->x = (player->x < MAP_WIDTH - 1) ? player->x + 1 : player->x;
+                player->x = (player->x < MAP_WIDTH - 2) ? player->x + 1 : player->x;
                 break;
             // Using "player->x" is a way to access the 'x' field of the Player struct
 
