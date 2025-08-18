@@ -12,6 +12,7 @@ int main() {
         game_loop(&player);
     }
 
-    endwin();  // Stops ncurses
+    endwin();
     return 0;
 }
+

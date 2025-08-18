@@ -14,7 +14,6 @@ void init_game() {
     // cbreak();  // Deactivate line buffering
 }
 
-
 void game_loop(Player *player) {
     draw_map();
     draw_player(player);
