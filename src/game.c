@@ -16,8 +16,11 @@ void init_game() {
 
 
 void game_loop(Player *player) {
-    int ch = getch();
+    draw_map();
+    draw_player(player);
+    wrefresh(get_mapwin());
 
+    int ch = getch();
     if (ch != ERR) {
         switch (ch){
             case 'W':
@@ -46,8 +49,5 @@ void game_loop(Player *player) {
                 endwin();
                 exit(0);
         }
-        draw_map();
-        draw_player(player);
-        wrefresh(get_mapwin());
     }
 }
