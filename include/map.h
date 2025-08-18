@@ -3,8 +3,8 @@
 
 #include <ncurses.h>
 
-#define MAP_WIDTH 20
-#define MAP_HEIGHT 10
+#define MAP_WIDTH 64
+#define MAP_HEIGHT 20
 
 void init_map(void);
 void draw_map(void);
