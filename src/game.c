@@ -4,14 +4,12 @@
 
 void init_game() {
     initscr();
-    // raw();  // Grabs pressed keys instantly
+    raw();  // Deactivate line buffering and special signal characters
     noecho();
     curs_set(FALSE);
     keypad(stdscr, TRUE);  // Enables special chars input like arrows
-    // timeout(100);  // Define a timeout for getch()
-
+    timeout(100);  // Define a timeout for getch(), keeping the game running
     nodelay(stdscr, TRUE);  // Non-blocking mode for getch()
-    // cbreak();  // Deactivate line buffering
 }
 
 void game_loop(Player *player) {
