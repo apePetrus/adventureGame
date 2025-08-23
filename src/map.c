@@ -18,8 +18,6 @@ void draw_map(void){
     }
 
     box(mapwin, 0, 0);
-
-    wrefresh(mapwin);
 }
 
 WINDOW* get_mapwin(void) {
