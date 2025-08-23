@@ -2,7 +2,7 @@ CC = gcc
 CFLAGS = -Wall -Wextra -pedantic -std=c99
 LDFLAGS = -lncurses
 
-SRC = src/main.c src/game.c src/map.c src/player.c src/log.c src/render.c
+SRC = src/main.c src/game.c src/map.c src/player.c src/log.c src/render.c src/inventory.c
 OBJ = $(SRC:.c=.o)
 TARGET = adventureGame
 
