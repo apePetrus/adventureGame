@@ -3,6 +3,7 @@
 
 #include "player.h"
 #include "map.h"
+#include "log.h"
 
 void init_game();
 void game_loop(Player *player);

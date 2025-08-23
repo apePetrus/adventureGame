@@ -6,6 +6,7 @@ int main() {
 
     init_game();
     init_map();
+    init_log();
     init_player(&player, MAP_WIDTH / 2, MAP_HEIGHT / 2, '@');
 
     while (1) {
