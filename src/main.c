@@ -1,5 +1,8 @@
 #include <ncurses.h>
 #include "../include/game.h"
+#include "../include/map.h"
+#include "../include/log.h"
+#include "../include/inventory.h"
 
 int main() {
     Player player;

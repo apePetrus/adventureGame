@@ -1,5 +1,8 @@
 #include <ncurses.h>
-#include "../include/game.h"
+#include "../include/render.h"
+#include "../include/inventory.h"
+#include "../include/map.h"
+#include "../include/log.h"
 
 void render (Player *player) {
     werase(get_mapwin());

@@ -1,6 +1,8 @@
 #include <ncurses.h>
 #include <stdlib.h>
 #include "../include/game.h"
+#include "../include/render.h"
+#include "../include/map.h"
 
 void init_game() {
     initscr();
